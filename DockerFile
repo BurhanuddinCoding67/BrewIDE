@@ -1,0 +1,18 @@
+FROM node:18
+
+# 1. Install Java first (this rarely changes, so we do it once)
+RUN apt-get update && apt-get install -y openjdk-21-jdk
+
+WORKDIR /app
+
+# 2. Copy just these files first
+COPY package*.json ./
+
+# 3. Run your install
+RUN npm install
+
+# 4. Copy the rest of your code
+COPY . .
+
+# 5. Start your server
+CMD ["node", "server.js"]
