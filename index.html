@@ -1523,7 +1523,7 @@ async function runWandbox(src, stdin){
     progErr:(d.program_error||'').trimEnd(),
     exitCode:String(d.status||'0'),
     signal:d.signal||null,
-    backend:'Wandbox / OpenJDK 21'
+    backend:'Wandbox / OpenJDK 17'
   };
 }
 
@@ -1577,7 +1577,7 @@ async function runCode(){
   document.getElementById('statusErrors').style.display='none';
 
   let _backend = 'Java';
-  addLine('Java (OpenJDK 21)  ·  BrewIDE','info');
+  addLine('Java (OpenJDK 17)  ·  BrewIDE','info');
   addLine('$ javac '+fname,'info');
 
   const t0=Date.now();
