@@ -1362,13 +1362,11 @@ function resetUI(btn,lb){
 // Priority: local server → Piston → Wandbox (fallback chain)
 // ── Server URL — update this after deploying to Railway ──────────────────────
 // Railway URL looks like: https://brewide-java-server-production.up.railway.app
-// Leave as localhost for local development
-const LOCAL_SERVER = 'http://localhost:5454';
 
 // Backend 0 — Interactive WebSocket (real-time stdin/stdout)
 function runInteractive(src){
   return new Promise((resolve, reject) => {
-    const WS_URL = 'ws://localhost:5454/interactive';
+    const WS_URL = 'ws:///interactive';
     let ws;
     try { ws = new WebSocket(WS_URL); }
     catch(e){ return reject(new Error('runLocal: '+e.message)); }
@@ -1459,7 +1457,7 @@ function runInteractive(src){
 
 // Legacy non-interactive fallback (still used by cloud backends)
 async function runLocal(src, stdin){
-  const res = await fetch(LOCAL_SERVER+'/execute',{
+  const res = await fetch('/execute',{
     method:'POST', headers:{'Content-Type':'application/json'},
     body: JSON.stringify({source:src, stdin:stdin||'', filename:getF().name})
   });
@@ -1539,7 +1537,7 @@ async function javaRun(src, stdin){
 
   // 2. Try plain HTTP local server
   try {
-    const res = await fetch('http://localhost:5454/execute', {
+    const res = await fetch('/execute', {
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({source:src, stdin:stdin||''})
     });
