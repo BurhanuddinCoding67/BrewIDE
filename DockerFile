@@ -1,18 +1,20 @@
+# Use Node base image
 FROM node:18
 
-# 1. Install Java first (this rarely changes, so we do it once)
+# Install Java (JDK 21)
 RUN apt-get update && apt-get install -y openjdk-21-jdk
 
+# Set working directory
 WORKDIR /app
 
-# 2. Copy just these files first
-COPY package*.json ./
-
-# 3. Run your install
-RUN npm install
-
-# 4. Copy the rest of your code
+# Copy all files into container
 COPY . .
 
-# 5. Start your server
+# Install dependencies (if any)
+RUN npm install
+
+# Expose your port
+EXPOSE 5454
+
+# Start your server
 CMD ["node", "server.js"]
