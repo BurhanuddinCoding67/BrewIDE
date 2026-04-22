@@ -477,7 +477,7 @@ body.theme-light .spl-footer {
       <button class="spl-btn" onclick="launchIDE()">Start coding</button>
     </div>
 
-    <div class="spl-footer">Copyright &copy; 2026 Burhanuddin Shakir</div>
+    <div class="spl-footer">Copyright &copy; 2026 Burhanuddin Murtaza</div>
   </div>
 
 </div>
@@ -615,12 +615,12 @@ body.theme-light .spl-footer {
 const DEFAULT_CODE = `/**
  * Welcome to BrewIDE — A Java IDE built with passion.
  *
- * Created by Burhanuddin Shakir
- * "I love coding so much that I decided to build my own IDE!"
+ * Created by Burhanuddin Murtaza
+ * "I was so bored that I decided to build my own IDE!"
  *
  * BrewIDE Features:
  *   - Syntax highlighting (dark & light themes)
- *   - Real-time error detection with red squiggly lines
+ *   - Real-time error detection
  *   - Auto-close brackets, braces & quotes
  *   - Debug panel with one-click auto-fixes
  *   - Live execution timer
@@ -632,10 +632,10 @@ const DEFAULT_CODE = `/**
 public class Main {
 
     // A little about the creator
-    static String creator    = "Burhanuddin Shakir";
+    static String creator    = "Burhanuddin Murtaza";
     static String passion    = "Coding";
     static String project    = "BrewIDE";
-    static int    linesBuilt = 1200;
+    static int    linesBuilt = 2786;
 
     public static void main(String[] args) {
 
@@ -1550,7 +1550,7 @@ async function javaRun(src, stdin){
       progErr:    (d.stderr||'').trimEnd(),
       exitCode:   String(d.exitCode??0),
       signal:     d.signal||null,
-      backend:    'Local JDK'
+      backend:    'Live JDK'
     };
   } catch(e){ errors.push('runLocalHTTP: '+e.message); }
 
@@ -1790,8 +1790,8 @@ let BREW_CONFIG = {
   ideName        : 'BrewIDE',
   ideSubtitle    : 'Java Development Environment',
   ideVersion     : 'v1.0',
-  authorName     : 'Burhanuddin Shakir',
-  splashMessage  : 'Built with ☕ by Burhanuddin Shakir',
+  authorName     : 'Burhanuddin Murtaza',
+  splashMessage  : 'Built with ☕ by Burhanuddin Murtaza',
   defaultTheme   : 'dark',
   donateUrl      : 'https://www.buymeacoffee.com/BrewIDEdev',
   donateAmounts  : [1, 2, 5, 10],
@@ -2156,7 +2156,7 @@ document.addEventListener('keydown', e => {
   <div id="dmHeader" style="padding:32px 32px 24px;text-align:center;position:relative;">
     <img id="dmLogo" src="" alt="BrewIDE" style="width:68px;height:68px;object-fit:contain;border-radius:14px;margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;"/>
     <div style="font-size:22px;font-weight:800;letter-spacing:-0.5px;margin-bottom:4px;" id="dmTitle">Support BrewIDE</div>
-    <div style="font-size:13px;opacity:.55;line-height:1.5;" id="dmSub">Built with ☕ by Burhanuddin Shakir<br>Every contribution keeps the code flowing.</div>
+    <div style="font-size:13px;opacity:.55;line-height:1.5;" id="dmSub">Built with ☕ by Burhanuddin Murtaza<br>Every contribution keeps the code flowing.</div>
   </div>
 
   <!-- Amount chips -->
@@ -2384,7 +2384,7 @@ body.theme-light .dm-chip.selected .dm-chip-label { color:#a07800; }
             </div>
             <div class="adm-field" style="margin-bottom:14px;">
               <label class="adm-label">Author Name</label>
-              <input class="adm-input" id="cfg_authorName" placeholder="Burhanuddin Shakir"/>
+              <input class="adm-input" id="cfg_authorName" placeholder="Burhanuddin Murtaza"/>
             </div>
             <div class="adm-field">
               <label class="adm-label">Copyright Year</label>
@@ -2423,7 +2423,7 @@ body.theme-light .dm-chip.selected .dm-chip-label { color:#a07800; }
             </div>
             <div class="adm-field">
               <label class="adm-label">Splash Message</label>
-              <input class="adm-input" id="cfg_splashMessage" placeholder="Built with ☕ by Burhanuddin Shakir"/>
+              <input class="adm-input" id="cfg_splashMessage" placeholder="Built with ☕ by Burhanuddin Murtaza"/>
             </div>
           </div>
         </div>
