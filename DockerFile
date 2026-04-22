@@ -1,8 +1,8 @@
 # Use Node base image
 FROM node:18
 
-# Install Java (JDK 21)
-RUN apt-get update && apt-get install -y openjdk-21-jdk
+# Install Java (JDK 17)
+RUN apt-get update && apt-get install -y openjdk-17-jdk
 
 # Set working directory
 WORKDIR /app
@@ -18,3 +18,11 @@ EXPOSE 5454
 
 # Start your server
 CMD ["node", "server.js"]
+
+
+
+
+
+
+
+
