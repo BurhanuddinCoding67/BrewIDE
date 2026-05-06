@@ -1,0 +1,12 @@
+services:
+  brew-ide:
+    build:
+      context: .
+      dockerfile: DockerFile  # This tells Docker to look for your specific filename
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
