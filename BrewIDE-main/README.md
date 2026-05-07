@@ -25,7 +25,7 @@ Live at **[brewide.onrender.com](https://brewide.onrender.com)**
 - **Deployment** — Docker on Render
 ## Just want to use it?
  
-No setup needed — the deployed version is live at **[brewide.onrender.com](https://brewide.onrender.com)**. Open it and start writing Java straight away.
+No setup needed — the deployed version is live at **[brewide.onrender.com](https://brewide.onrender.com)**. Open it and wait for render to load, then start writing Java code.
  
 ## Running locally
  
